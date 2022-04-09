@@ -1,0 +1,1420 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="shortcut icon" href="logo.gif">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="style.css"></script>
+        <script src="sendEmail.php"></script>
+        <script src="https://js.hcaptcha.com/1/api.js" async defer></script> 
+        
+  <style>
+            body {
+    position: relative;
+    
+  }
+  #section1 {padding-top:50px;height:760px;color: #fff; background-image: url(fundal1.jpeg);background-size: 100%;position:static;}
+  #section2 {padding-top:50px;height:760px;color: #fff; background-image: url(fundal3.jpg);background-size: 100%;background-repeat: no-repeat;}
+  #section41 {padding-top:50px;height:760px;color: #fff; background-image: linear-gradient(to right bottom ,rgb(168, 252, 252),rgb(0, 204, 255),blue);backface-visibility:visible;}
+  #section42 {padding-top:50px;height:950px;color: #fff; background-image: url(fundal2.png);background-size: 100%;background-repeat: no-repeat;}
+  #section3 {padding-top:50px;height:760px;color: #fff; background-image: linear-gradient(to right bottom ,lightgray,rgb(115, 115, 115),darkslategrey,rgb(3, 47, 3));}     
+        .p1
+            {
+                font-family: "Ubuntu",sans-serif;
+                color:lightgray;
+                padding-left:20%;
+                padding-top: 12%;
+                font-size:40px;
+            }
+            .p2
+            {
+                font-family:"Ubuntu",sans-serif;
+                padding-top:50px ;
+                font-size:70px;
+                padding-left:20%;
+                color:lightgray;
+                line-height: 2px;
+            }
+            .p3
+            {
+                font-family:"Ubuntu",sans-serif;
+                padding-top:50px ;
+                font-size:60px;
+                padding-left:11%;
+                color:lightgray;
+                line-height: 2px;
+                text-align: left;
+            }
+            .p4{
+                font-family: "Ubuntu",sans-serif;
+                color:lightgray;
+                text-align: center;
+                line-height: 2px;
+                font-size:40px;
+            }
+            .p5{
+                font-family: "Ubuntu",sans-serif;
+                color:black;
+                text-align: center;
+                line-height: 2px;
+                font-size:40px;
+            }
+            .btn-group button {
+  background-color: aqua; /* Green background */
+  border: 1px solid blue; /* Green border */
+  border-radius:25px;
+  color: blue; /* White text */
+  padding: 20px 24px; /* Some padding */
+  width: 50%; /* Set a width if needed */
+  display: block; /* Make the buttons appear below each other */
+  width: 200px;
+  font-weight: bold;
+  
+}
+.button
+{
+    padding-left: 50px;
+    
+}
+
+.btn-group button:not(:last-child) {
+  border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: blue;
+  color:aqua;
+}
+.newspaper {
+    column-count: 4;
+   column-width: 100px;
+  column-gap: 50px;
+  column-rule-style:inherit;
+}
+table, tr, td {
+  border: 5px solid black;
+  border-collapse: collapse;
+  color:black;
+  text-align: center;
+  font-size: 20px;
+  
+  height: 80px;
+}
+                    * {box-sizing: border-box}
+body {font-family: "ubuntu", sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+
+
+/* Caption text */
+.text {
+  color: Black;
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration:10000s;
+}
+
+@keyframes fade {
+  from {opacity: 1} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-right: 50px;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  align-content: center;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}.flip-card-front2, .flip-card-back2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front2 {
+  background-color: grey;
+  color: black;
+}
+
+.flip-card-back2 {
+  background-color: lightgrey;
+  color: white;
+  transform: rotateY(180deg);
+}
+.container {
+  padding: 16px;
+  text-align: center;
+
+}
+.modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: grey;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 40%;
+            
+        }
+
+        /* The Close Button */
+        .close {
+            color:black;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+.title{
+    font-family: "Ubuntu",sans-serif;
+    color:#000 ;
+    font-size:30px;
+    font-weight: bold;
+    text-align: center;
+}
+.card3 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  background-color: lightgray;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+.column5{
+  padding-left: 40px;
+  column-count: 2;
+   column-width: 100px;
+  
+  column-rule-style: inherit;
+}
+        </style>
+        <title>Clasa mea</title>
+    </head>
+    <body bgcolor=lightcyan>
+        <body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+              <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>                        
+                  </button>
+                  <a class="navbar-brand" href="#">CLASA MEA</a>
+                </div>
+                <div>
+                  <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                      <li><a href="#section1">Home</a></li>
+                      <li><a href="#section2">Members</a></li>
+                     
+                      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">About <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#section41">Orar</a></li>
+                          <li><a href="#section42">Gallery</a></li>
+                     
+                        </ul>
+                      </li>
+                      <li><a href="#section3">Contact</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </nav>    
+            
+            <div id="section1" class="container-fluid">
+                <p class="p1">Welcome</p>
+                    <p class="p2"><b>TO MY Website</b></p>
+                    <div class="container">
+                      <p class="p3" >And I'm a <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
+                      </div>
+                        <script src="clasa mea.js"></script>
+              
+            </div>
+            <div id="section2" class="container-fluid">
+                <br><br><br>
+            <center><Font color="blue" size="20px">MEMBERS</font></center>
+             <div class="newspaper">
+                 <div class="button">
+                <div class="btn-group"> 
+                <br><br>
+                <button class="myBtn_multi">  Aciobanitei Sebastian</button>
+    <button class="myBtn_multi">Acuculitei Cosmin</button>
+    <button class="myBtn_multi">Adumitresei Daniel</button>
+    <button class="myBtn_multi">Ciurariu Alexandru</button>
+    <button class="myBtn_multi">Damian Razvan</button>
+    <button class="myBtn_multi">Hlihor Andrei</button>
+    <button class="myBtn_multi">Gasca Flavius</button>
+
+  
+    <div class="modal modal_multi">
+
+        <div class="modal-content">
+            <span class="close close_multi">×</span>
+            <div class="card">
+              <center><img src="Sebi.jpg" alt="Sebi" style="width:60%"></center>
+              <p class="title">Sebastian Aciobanitei</p>
+              <center><p ><a href="https://www.facebook.com/aciobanitei.sebastian.5"><button>Facebook</button></a></p></center>
+            </div>
+        </div>
+
+    </div>
+
+   
+    <div  class="modal modal_multi">
+
+    
+        <div class="modal-content">
+            <span class="close close_multi">×</span>
+            <div class="card">
+              <center><img src="cosmin.jpg" alt="Cosmin" style="width:60%"></center>
+              <p class="title">Acuculitei Cosmin</p>
+              <center><p ><a href="https://www.facebook.com/profile.php?id=100007979745646>"><button>Facebook</button></a></p></center>
+            </div>
+        </div>
+
+    </div>
+    <div  class="modal modal_multi">
+
+      
+      <div class="modal-content">
+          <span class="close close_multi">×</span>
+          <div class="card">
+            <center><img src="daniel.jpg" alt="Daniel" style="width:60%"></center>
+            <p class="title">Adumitresei Daniel</p>
+            <center><p ><a href="https://www.facebook.com/daniel.adumitresei"><button>Facebook</button></a></p></center>
+          </div>
+      </div>
+
+  </div>
+  <div  class="modal modal_multi">
+
+
+    <div class="modal-content">
+        <span class="close close_multi">×</span>
+        <div class="card">
+          <center><img src="alex.jpg" alt="Alex" style="width:60%"></center>
+          <p class="title">Ciurariu Alexandru</p>
+          <center><p ><a href="https://www.facebook.com/alex.ciurariu.31"><button>Facebook</button></a></p></center>
+        </div>
+    </divFacebook
+
+</div>
+<div  class="modal modal_multi">
+
+ 
+  <div class="modal-content">
+      <span class="close close_multi">×</span>
+      <div class="card">
+        <center><img src="razvan.jpg" alt="Razvan" style="width:60%"></center>
+        <p class="title">Damian Razvan</p>
+        <center><p ><a href="https://www.facebook.com/razvan.damian.355"><button>Facebook</button></a></p></center>
+      </div>
+  </div>
+
+</div>
+<div  class="modal modal_multi">
+
+
+  <div class="modal-content">
+      <span class="close close_multi">×</span>
+      <div class="card">
+        <center><img src="hlihor.jpg" alt="Andrei" style="width:60%"></center>
+        <p class="title">Hlihor Andrei</p>
+        <center><p ><a href="https://www.facebook.com/andrei.hlihor.5"><button>Facebook</button></a></p></center>
+      </div>
+  </div>
+
+</div>
+<div  class="modal modal_multi">
+  <div class="modal-content">
+      <span class="close close_multi">×</span>
+      <div class="card">
+        <center><img src="fara.gif" alt="Flavius" style="width:60%"></center>
+        <p class="title">Gasca Flavius</p>
+        <center><p ><a href="https://www.facebook.com/profile.php?id=100009380253651"><button>Facebook</button></a></p></center>
+      </div>
+  </div>
+
+</div>
+       </div>
+       </div>
+       </div>      
+              
+              <br><br><br><br>
+              <div class="btn-group"> 
+                <button class="myBtn_multi">  Morosanu Ciprian</button>
+                <button class="myBtn_multi">Manolache Andrei</button>
+                <button class="myBtn_multi">Maftei Ionut</button>
+                <button class="myBtn_multi">Popescu Andrei</button>
+                <button class="myBtn_multi">Doroftei Mario</button>
+                <button class="myBtn_multi">Tverdohleb Cristian</button>
+                <button class="myBtn_multi">Dilion Iulian</button>
+            
+               
+                <div class="modal modal_multi">
+                    <div class="modal-content">
+                        <span class="close close_multi">×</span>
+                        <div class="card">
+                          <center><img src="ciprian.jpg" alt="Ciprian" style="width:60%"></center>
+                          <p class="title">Morosanu Ciprian</p>
+                          <center><p ><a href="https://www.facebook.com/profile.php?id=100009927253343"><button>Facebook</button></a></p></center>
+                        </div>
+                    </div>
+                </div>
+                <div  class="modal modal_multi">
+                    <div class="modal-content">
+                        <span class="close close_multi">×</span>
+                        <div class="card">
+                          <center><img src="mano.jpg" alt="Mano" style="width:60%"></center>
+                          <p class="title">Manolache Andrei</p>
+                          <center><p ><a href="https://www.facebook.com/manolache.andrei.167"><button>Facebook</button></a></p></center>
+                        </div>
+                    </div>
+                </div>
+                <div  class="modal modal_multi">
+                  <div class="modal-content">
+                      <span class="close close_multi">×</span>
+                      <div class="card">
+                        <center><img src="ionut.png" alt="Ionut" style="width:60%"></center>
+                        <p class="title">Maftei Ionut</p>
+                        <center><p ><a href="https://www.facebook.com/ionut.maftei.7923"><button>Facebook</button></a></p></center>
+                      </div>
+                  </div>
+              </div>
+              <div  class="modal modal_multi">
+                <div class="modal-content">
+                    <span class="close close_multi">×</span>
+                    <div class="card">
+                      <center><img src="popica.jpg" alt="Popica" style="width:60%"></center>
+                      <p class="title">Popescu Andrei</p>
+                      <center><p ><a href="https://www.facebook.com/andreip0pescu"><button>Facebook</button></a></p></center>
+                    </div>
+                </div>
+            </div>
+            <div  class="modal modal_multi">
+              <div class="modal-content">
+                  <span class="close close_multi">×</span>
+                  <div class="card">
+                    <center><img src="mario.jpg" alt="Mario" style="width:60%"></center>
+                    <p class="title">Doroftei Mario</p>
+                    <center><p ><a href="https://www.facebook.com/mario.140805"><button>Facebook</button></a></p></center>
+                  </div>
+              </div>
+            </div>
+            <div  class="modal modal_multi">
+              <div class="modal-content">
+                  <span class="close close_multi">×</span>
+                  <div class="card">
+                    <center><img src="cristi.jpg" alt="Cristi" style="width:60%"></center>
+                    <p class="title">Tverdohleb Cristian</p>
+                    <center><p ><a href="https://www.facebook.com/cristiannnu"><button>Facebook</button></a></p></center>
+                  </div>
+              </div>
+            </div>
+            <div  class="modal modal_multi">
+              <div class="modal-content">
+                  <span class="close close_multi">×</span>
+                  <div class="card">
+                    <center><img src="iulian.jpg" alt="Flavius" style="width:60%"></center>
+                    <p class="title">Dilion Iulian</p>
+                    <center><p ><a href="https://www.facebook.com/iulian.dilion.9"><button>Facebook</button></a></p></center>
+                  </div>
+              </div>
+            </div>
+             </div>
+             <br><br><br><br>
+              <div class="btn-group"> 
+                <button class="myBtn_multi">Solcanu Pavel</button>
+                <button class="myBtn_multi">Raileanu Luca</button>
+                <button class="myBtn_multi">Tudosa Cosmina</button>
+                <button class="myBtn_multi">Sumanariu Cristina</button>
+                <button class="myBtn_multi">Crasmariu Ana</button>
+                <button class="myBtn_multi">Simiras Petruta</button>
+                <button class="myBtn_multi">Lates Bianca</button>
+            
+              
+                <div class="modal modal_multi">
+                    <div class="modal-content">
+                        <span class="close close_multi">×</span>
+                        <div class="card">
+                          <center><img src="eu.jpg" alt="Solcanu" style="width:60%"></center>
+                          <p class="title">Solcanu Pavel</p>
+                          <center><p ><a href="https://www.facebook.com/pavelalexandru.solcanu"><button>Facebook</button></a></p></center>
+                        </div>
+                    </div>
+                </div>
+                <div  class="modal modal_multi">
+                    <div class="modal-content">
+                        <span class="close close_multi">×</span>
+                        <div class="card">
+                          <center><img src="luca.jpg" alt="Luca" style="width:60%"></center>
+                          <p class="title">Raileanu Luca</p>
+                          <center><p ><a href="https://www.facebook.com/raileanu.luca"><button>Facebook</button></a></p></center>
+                        </div>
+                    </div>
+                </div>
+                <div  class="modal modal_multi">
+                  <div class="modal-content">
+                      <span class="close close_multi">×</span>
+                      <div class="card">
+                        <center><img src="cosmina.jpg" alt="Cosmina" style="width:60%"></center>
+                        <p class="title">Tudosa Cosmina</p>
+                        <center><p ><a href="https://www.facebook.com/cosmina.tudosa.1"><button>Facebook</button></a></p></center>
+                      </div>
+                  </div>
+              </div>
+              <div  class="modal modal_multi">
+                <div class="modal-content">
+                    <span class="close close_multi">×</span>
+                    <div class="card">
+                      <center><img src="cristina.jpg" alt="Cristina" style="width:60%"></center>
+                      <p class="title">Sumanariu Cristina</p>
+                      <center><p ><a href="https://www.facebook.com/cristina.sumanariu"><button>Facebook</button></a></p></center>
+                    </div>
+                </div>
+            </div>
+            <div  class="modal modal_multi">
+              <div class="modal-content">
+                  <span class="close close_multi">×</span>
+                  <div class="card">
+                    <center><img src="crasmariu.jpg" alt="Ana" style="width:60%"></center>
+                    <p class="title">Crasmariu Ana</p>
+                    <center><p ><a href="https://www.facebook.com/anamaria.crismariu.54"><button>Facebook</button></a></p></center>
+                  </div>
+              </div>
+            </div>
+            <div  class="modal modal_multi">
+              <div class="modal-content">
+                  <span class="close close_multi">×</span>
+                  <div class="card">
+                    <center><img src="petruta.jpg" alt="Petruta" style="width:60%"></center>
+                    <p class="title">Simiras Petruta</p>
+                    <center><p ><a href="https://www.facebook.com/petruta.simiras.1"><button>Facebook</button></a></p></center>
+                  </div>
+              </div>
+            </div>
+            <div  class="modal modal_multi">
+              <div class="modal-content">
+                  <span class="close close_multi">×</span>
+                  <div class="card">
+                    <center><img src="bianca.jpg" alt="Bianca" style="width:60%"></center>
+                    <p class="title">Lates Bianca</p>
+                    <center><p ><a href="https://www.facebook.com/bianca.lates.7"><button>Facebook</button></a></p></center>
+                  </div>
+              </div>
+            </div>
+             </div>
+
+             </div>
+             <br><br><br><br>
+             <div class="btn-group">
+             <button class="myBtn_multi">Cornea Denisa</button>
+                <button class="myBtn_multi">Tanasoaia Paula</button>
+                <button class="myBtn_multi">Loghin Alexandra</button>
+                <button class="myBtn_multi">Mocanu Maria</button>
+                <button class="myBtn_multi">Aioanei Rebeca</button>
+                <button class="myBtn_multi">Maria Ana</button>
+            
+               
+                <div class="modal modal_multi">
+                    <div class="modal-content">
+                        <span class="close close_multi">×</span>
+                        <div class="card">
+                          <center><img src="cornea.jpg" alt="Denisa" style="width:60%"></center>
+                          <p class="title">Cornea Denisa</p>
+                          <center><p ><a href="https://www.facebook.com/gabrieladenisa.cornea"><button>Facebook</button></a></p></center>
+                        </div>
+                    </div>
+                </div>
+                <div  class="modal modal_multi">
+                    <div class="modal-content">
+                        <span class="close close_multi">×</span>
+                        <div class="card">
+                          <center><img src="paula.jpg" alt="Paula" style="width:60%"></center>
+                          <p class="title">Tanasoaia Paula</p>
+                          <center><p ><a href="https://www.facebook.com/paula.paula.96387"><button>Facebook</button></a></p></center>
+                        </div>
+                    </div>
+                </div>
+                <div  class="modal modal_multi">
+                  <div class="modal-content">
+                      <span class="close close_multi">×</span>
+                      <div class="card">
+                        <center><img src="loghin.jpg" alt="Alexandra" style="width:60%"></center>
+                        <p class="title">Loghin Alexandra</p>
+                        <center><p ><a href="https://www.facebook.com/alexandra.loghin.104"><button>Facebook</button></a></p></center>
+                      </div>
+                  </div>
+              </div>
+              <div  class="modal modal_multi">
+                <div class="modal-content">
+                    <span class="close close_multi">×</span>
+                    <div class="card">
+                      <center><img src="fara.gif" alt="Mocanu" style="width:60%"></center>
+                      <p class="title">Mocanu Maria</p>
+                      <center><p ><a href="https://www.facebook.com/profile.php?id=100051358972529"><button>Facebook</button></a></p></center>
+                    </div>
+                </div>
+            </div>
+            <div  class="modal modal_multi">
+              <div class="modal-content">
+                  <span class="close close_multi">×</span>
+                  <div class="card">
+                    <center><img src="rebeca.jpg" alt="Rebeca" style="width:60%"></center>
+                    <p class="title">Aioanei Rebeca</p>
+                    <center><p ><a href="https://www.facebook.com/profile.php?id=100011257872217"><button>Facebook</button></a></p></center>
+                  </div>
+              </div>
+            </div>
+            <div  class="modal modal_multi">
+              <div class="modal-content">
+                  <span class="close close_multi">×</span>
+                  <div class="card">
+                    <center><img src="maria.jpg" alt="Maria" style="width:60%"></center>
+                    <p class="title">Maria Ana</p>
+                    <center><p ><a href="https://www.facebook.com/profile.php?id=100023392081530"><button>Facebook</button></a></p></center>
+                  </div>
+              </div>
+            </div>
+          </div>
+             </div>
+            </div>
+            </div>
+            </div>
+            <div id="section41" class="container-fluid">
+                <BR><BR>
+                <p class="p5">ORAR</p>
+                <BR><BR>
+              <Table border=5 border-color=black align=center  width=90% height=80%> 
+        <tr bgcolor=grey>
+          <td>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front2">
+                <center><b>Orar</b></center>
+              </div>
+              <div class="flip-card-back">
+                <h4>A X-a MI</h4> 
+              </div>
+            </div>
+          </div>
+          </td>
+        <td><center><b>Luni</b></td>
+        <td><center><b>Marti</b></td>
+        <td><center><b>Miercuri</b></td>
+        <td><center><b>Joi</b></td>
+        <td><center><b>Vineri</b></td>
+        </tr>
+        <tr bgcolor=lightgrey>
+        <td bgcolor=grey ><div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front2">
+              <center><b>1</b></center>
+            </div>
+            <div class="flip-card-back">
+              <h4>2:00-2:50</h4> 
+            </div>
+          </div>
+        </div></td>
+        <td ><div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <center>Matematica</center>
+            </div>
+            <div class="flip-card-back">
+              <h4>Loreta Pogorevici</h4> 
+            </div>
+          </div>
+        </div></td>
+        <td ><div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              Matematica
+            </div>
+            <div class="flip-card-back">
+              <h4>Loreta Pogorevici</h4> 
+            </div>
+          </div>
+        </div></td>
+        <td ><div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              Informatica
+            </div>
+            <div class="flip-card-back">
+              <h4>Acatrinei Vasiliu Cristinel</h4> 
+            </div>
+          </div>
+        </div></td>
+        <td ><div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              Romana
+            </div>
+            <div class="flip-card-back">
+              <h4>Gabriela Ariton</h4> 
+            </div>
+          </div>
+        </div></td>
+        <td ><div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              Biologie
+            </div>
+            <div class="flip-card-back">
+              <h4>Oltea Savin</h4> 
+            </div>
+          </div>
+        </div></td>
+        </tr>
+        <tr bgcolor=lightgrey>
+        <td bgcolor=grey><div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front2">
+              2
+            </div>
+            <div class="flip-card-back">
+              <h4>3:00-3:50</h4> 
+            </div>
+          </div>
+        </div></td>
+          
+        <td ><div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              Engleza
+            </div>
+            <div class="flip-card-back">
+              <h4>Alina Mironescu</h4> 
+            </div>
+          </div>
+        </div></td>
+        <td ><div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              Matematica
+            </div>
+            <div class="flip-card-back">
+              <h4>Loreta Pogorevici</h4> 
+            </div>
+          </div>
+        </div></td>
+        <td ><div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              Romana
+            </div>
+            <div class="flip-card-back">
+              <h4>Gabriela Ariton</h4> 
+            </div>
+          </div>
+        </div></td>
+        <td ><div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              Chimie
+            </div>
+            <div class="flip-card-back">
+              <h4>Ana  Podariu</h4> 
+            </div>
+          </div>
+        </div></td>
+        <td ><div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              Biologie
+            </div>
+            <div class="flip-card-back">
+              <h4>Oltea Savin</h4> 
+            </div>
+          </div>
+        </div></td>
+        </tr>
+        <tr bgcolor=lightgrey>
+        <td bgcolor=grey><div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front2">
+              <center><b>3</b></center>
+            </div>
+            <div class="flip-card-back">
+              <h4>4:00-4:50</h4> 
+            </div>
+          </div>
+        </div></td>
+        <td ><div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              Engleza
+            </div>
+            <div class="flip-card-back">
+              <h4>Alina Mironescu</h4> 
+            </div>
+          </div>
+        </div></td>
+        <td ><div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              Sport
+            </div>
+            <div class="flip-card-back">
+              <h4>Gabriel Matei</h4> 
+            </div>
+          </div>
+        </div></td>
+        <td ><div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              Romana
+            </div>
+            <div class="flip-card-back">
+              <h4>Gabriela Ariton</h4> 
+            </div>
+          </div>
+        </div></td>
+        <td ><div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              Matematica
+            </div>
+            <div class="flip-card-back">
+              <h4>Loreta Pogorevici</h4> 
+            </div>
+          </div>
+        </div></td>
+        <td ><div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              Franceza
+            </div>
+            <div class="flip-card-back">
+              <h4>Marius Zavastin</h4> 
+            </div>
+          </div>
+        </div></td>
+        </tr>
+        <tr bgcolor=lightgrey>
+        <td bgcolor=grey><div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front2">
+              <center><b>4</b></center>
+            </div>
+            <div class="flip-card-back">
+              <h4>5:00-5:50</h4> 
+            </div>
+          </div>
+        </div></td>
+        <td ><div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              Psihologie
+            </div>
+            <div class="flip-card-back">
+              <h4>Andreea Ungureanu</h4> 
+            </div>
+          </div>
+        </div></td>
+        <td ><div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              Fizica
+            </div>
+            <div class="flip-card-back">
+              <h4>Carmen Andrei</h4> 
+            </div>
+          </div>
+        </div></td>
+        <td ><div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              Religie
+            </div>
+            <div class="flip-card-back">
+              <h4>Stefan Tanase</h4> 
+            </div>
+          </div>
+        </div></td>
+        <td ><div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              Matematica
+            </div>
+            <div class="flip-card-back">
+              <h4>Loreta Pogorevici</h4> 
+            </div>
+          </div>
+        </div></td>
+        <td ><div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              Fizica
+            </div>
+            <div class="flip-card-back">
+              <h4>Carmen Andrei</h4> 
+            </div>
+          </div>
+        </div></td>
+        </tr>
+        <tr bgcolor=lightgrey>
+        <td bgcolor=grey><div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front2">
+              <center><b>5</b></center>
+            </div>
+            <div class="flip-card-back">
+              <h4>6:00-6:50</h4> 
+            </div>
+          </div>
+        </div></td>
+        <td><div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              TIC
+            </div>
+            <div class="flip-card-back">
+              <h4>Florin Pastravanu</h4> 
+            </div>
+          </div>
+        </div></td>
+        <td ><div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              Franceza
+            </div>
+            <div class="flip-card-back">
+              <h4>Marius Zavastin</h4> 
+            </div>
+          </div>
+        </div></td>
+        <td ><div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              CDS
+            </div>
+            <div class="flip-card-back">
+              <h4>Emilia Nemitanu</h4> 
+            </div>
+          </div>
+        </div></td>
+        <td ><div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              Muzica/Desen
+            </div>
+            <div class="flip-card-back">
+              <h4>Dan Nistor</h4> 
+            </div>
+          </div>
+        </div></td>
+        <td ><div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              Geografie
+            </div>
+            <div class="flip-card-back">
+              <h4>Cristina Buta</h4> 
+            </div>
+          </div>
+        </div></td>
+        <tr bgcolor=lightgrey>
+        <td bgcolor=grey><div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front2">
+              <center><b>6</b></center>
+            </div>
+            <div class="flip-card-back">
+              <h4>7:00-7:50</h4> 
+            </div>
+          </div>
+        </div></td>
+        <td><div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              Fizica
+            </div>
+            <div class="flip-card-back">
+              <h4>Carmen Andrei</h4> 
+            </div>
+          </div>
+        </div></td>
+        <td ><div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              Sport
+            </div>
+            <div class="flip-card-back">
+              <h4>Gabriel Matei</h4> 
+            </div>
+          </div>
+        </div></td>
+        <td ><div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              Ed. antreprenoriala
+            </div>
+            <div class="flip-card-back">
+              <h4>Doru Floristeanu</h4> 
+            </div>
+          </div>
+        </div></td>
+        <td ><div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              Chimie
+            </div>
+            <div class="flip-card-back">
+              <h4>Ana Podariu</h4> 
+            </div>
+          </div>
+        </div></td>
+        <td ><div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              Istorie
+            </div>
+            <div class="flip-card-back">
+              <h4>Constantin Bejenariu</h4> 
+            </div>
+          </div>
+        </div></td>
+        </tr>
+        </table>
+            </div>
+            <div id="section42" class="container-fluid">
+                <br><br>
+              <p class="p5">Gallery</p>
+              <br><br>
+              <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 14</div>
+                  <img src="1.jpeg" style="width:100%">
+                  <div class="text">Clasa a X-a MI</div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">2 / 14</div>
+                  <img src="2.jpeg" style="width:100%">
+                  <div class="text">Manolache Andrei</div>
+                </div>
+                <div class="mySlides fade">
+                  <div class="numbertext">3 / 14</div>
+                  <img src="3.jpeg" style="width:100%">
+                  <div class="text">Maria Ana</div>
+                </div>
+                <div class="mySlides fade">
+                  <div class="numbertext">4 / 14</div>
+                  <img src="5.jpeg" style="width:100%">
+                  <div class="text">Popescu Andrei</div>
+                </div>
+                <div class="mySlides fade">
+                  <div class="numbertext">5 / 14</div>
+                  <img src="6.jpeg" style="width:100%">
+                  <div class="text">Cornea Gabriela</div>
+                </div>
+                <div class="mySlides fade">
+                  <div class="numbertext">6 / 14</div>
+                  <img src="7.jpeg" style="width:100%">
+                  <div class="text">Crasmariu Ana</div>
+                </div>
+                <div class="mySlides fade">
+                  <div class="numbertext">7 / 14</div>
+                  <img src="8.jpeg" style="width:100%">
+                  <div class="text">Doroftei Mario</div>
+                </div>
+                <div class="mySlides fade">
+                  <div class="numbertext">8 / 14</div>
+                  <img src="9.jpeg" style="width:100%">
+                  <div class="text">Simiras Petruta</div>
+                </div>
+                <div class="mySlides fade">
+                  <div class="numbertext">9 / 14</div>
+                  <img src="10.jpeg" style="width:100%">
+                  <div class="text">Aioanei Rebeca</div>
+                </div>
+                <div class="mySlides fade">
+                  <div class="numbertext">10 / 14</div>
+                  <img src="11.jpeg" style="width:100%">
+                  <div class="text">Adumitresei Marian</div>
+                </div>
+                <div class="mySlides fade">
+                  <div class="numbertext">11 / 14</div>
+                  <img src="12.jpeg" style="width:100%">
+                  <div class="text">Sumanariu Cristina</div>
+                </div>
+                <div class="mySlides fade">
+                  <div class="numbertext">12 / 14</div>
+                  <img src="13.jpeg" style="width:100%">
+                  <div class="text">Tverdohleb Cristian</div>
+                </div>
+                <div class="mySlides fade">
+                  <div class="numbertext">13 / 14</div>
+                  <img src="15.jpeg" style="width:100%">
+                  <div class="text">Cosmina Tudosa</div>
+                </div>
+                <div class="mySlides fade">
+                  <div class="numbertext">14 / 14</div>
+                  <img src="16.jpeg" style="width:100%">
+                  <div class="text">Solcanu Pavel</div>
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span> 
+                  <span class="dot" onclick="currentSlide(4)"></span> 
+                  <span class="dot" onclick="currentSlide(5)"></span> 
+                  <span class="dot" onclick="currentSlide(6)"></span> 
+                  <span class="dot" onclick="currentSlide(7)"></span> 
+                  <span class="dot" onclick="currentSlide(8)"></span> 
+                  <span class="dot" onclick="currentSlide(9)"></span> 
+                  <span class="dot" onclick="currentSlide(10)"></span> 
+                  <span class="dot" onclick="currentSlide(11)"></span> 
+                  <span class="dot" onclick="currentSlide(12)"></span> 
+                  <span class="dot" onclick="currentSlide(13)"></span> 
+                  <span class="dot" onclick="currentSlide(14)"></span>  
+                </div>
+                
+                
+              </div>
+            <div id="section3" class="container-fluid">
+              <br><br><br>
+              <p class="p4">Contact us</p>
+              <br><br>
+             <div class="column5">
+              <section class="ftco-section">
+                <div class="container">
+                  <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                      <div class="wrapper">
+                        <div class="row no-gutters">
+                          <div class="col-md-6 d-flex align-items-stretch">
+                            <div class="contact-wrap w-100 p-md-5 p-4 py-5">
+                              <h3 class="mb-4">Write us</h3>
+                              <div id="form-message-warning" class="mb-4"></div> 
+                              <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+                                <div class="row">
+                                  <div class="col-md-12">
+                                    <div class="form-group">
+                                      <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+                                    </div>
+                                  </div>
+                                  <div class="col-md-12"> 
+                                    <div class="form-group">
+                                      <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                                    </div>
+                                  </div>
+                                  <div class="col-md-12">
+                                    <div class="form-group">
+                                      <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
+                                    </div>
+                                  </div>
+                                  <div class="col-md-12">
+                                    <div class="form-group">
+                                      <textarea name="message" class="form-control" id="message" cols="30" rows="6" placeholder="Message"></textarea>
+                                    </div>
+                                  </div>
+                                  <div class="h-captcha" data-sitekey="0cee3bc7-1122-412a-9c18-4e2da97248e1"></div>
+                                  <script src="https://js.hcaptcha.com/1/api.js" async defer></script>   
+                                  <div class="col-md-12">
+                                    <div class="form-group">
+                                      <input type="submit" value="Send Message" class="btn btn-primary">
+                                      <div class="submitting"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                          </div></div></div></div></div>
+                          
+                          <br><br><br><br><br>
+                        
+                      
+                    
+                  
+                  <div class="card3">
+                    <img src="eu2.jpg" alt="Solcanu" style="width:100%">
+                    <h1>Solcanu Pavel</h1>
+                    <p class="title">Freelancer,Creator,Designer</p>
+                    <p>Colegiul Vasile Lovinescu</p>
+                    <div style="margin: 15px 0;">
+                      <a href="https://www.facebook.com/pavelalexandru.solcanu"><i class="fa fa-facebook"></i></a> 
+                      <a href="https://www.instagram.com/alexsolcanu/"><i class="fa fa-instagram" ></i></a> 
+                      <a href="https://web.whatsapp.com/"><i class="fa fa-whatsapp"></i></a> 
+                    </div>
+                  </div>
+                </div>
+            
+              <script src="js/jquery.min.js"></script>
+              <script src="js/popper.js"></script>
+              <script src="js/bootstrap.min.js"></script>
+              <script src="js/jquery.validate.min.js"></script>
+              <script src="js/main.js"></script>
+            
+
+              
+         </section>
+            <script>
+              // Get the modal
+      
+              var modalparent = document.getElementsByClassName("modal_multi");
+      
+              // Get the button that opens the modal
+      
+              var modal_btn_multi = document.getElementsByClassName("myBtn_multi");
+      
+              // Get the <span> element that closes the modal
+              var span_close_multi = document.getElementsByClassName("close_multi");
+      
+              // When the user clicks the button, open the modal
+              function setDataIndex() {
+      
+                  for (i = 0; i < modal_btn_multi.length; i++)
+                  {
+                      modal_btn_multi[i].setAttribute('data-index', i);
+                      modalparent[i].setAttribute('data-index', i);
+                      span_close_multi[i].setAttribute('data-index', i);
+                  }
+              }
+      
+      
+      
+              for (i = 0; i < modal_btn_multi.length; i++)
+              {
+                  modal_btn_multi[i].onclick = function() {
+                      var ElementIndex = this.getAttribute('data-index');
+                      modalparent[ElementIndex].style.display = "block";
+                  };
+      
+                  // When the user clicks on <span> (x), close the modal
+                  span_close_multi[i].onclick = function() {
+                      var ElementIndex = this.getAttribute('data-index');
+                      modalparent[ElementIndex].style.display = "none";
+                  };
+      
+              }
+      
+              window.onload = function() {
+      
+                  setDataIndex();
+              };
+      
+              window.onclick = function(event) {
+                  if (event.target === modalparent[event.target.getAttribute('data-index')]) {
+                      modalparent[event.target.getAttribute('data-index')].style.display = "none";
+                  }
+      
+                  // OLD CODE
+                  if (event.target === modal) {
+                      modal.style.display = "none";
+                  }
+              };
+      
+      //XXXXXXXXXXXXXXXXXXXXXXX    Modified old code    XXXXXXXXXXXXXXXXXXXXXXXXXX
+      
+      // Get the modal
+      
+              var modal = document.getElementById('myModal');
+      
+      // Get the button that opens the modal
+              var btn = document.getElementById("myBtn");
+      
+      // Get the <span> element that closes the modal
+              var span = modal.getElementsByClassName("close")[0]; // Modified by dsones uk
+      
+      // When the user clicks on the button, open the modal
+      
+              btn.onclick = function() {
+      
+                  modal.style.display = "block";
+              }
+      
+      // When the user clicks on <span> (x), close the modal
+              span.onclick = function() {
+                  modal.style.display = "none";
+              }
+      
+      
+      
+          </script>
+              
+            
+              <script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+              </script>
+      <script src="https://js.hcaptcha.com/1/api.js" async defer></script>          
+        </body>
+</html>
